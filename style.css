@@ -1,0 +1,137 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: arial;
+  line-height: 2;
+  margin: 0;
+}
+
+body {
+  background: #333;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 500px) {
+    font-size: 80%;
+  }
+}
+
+p {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.invis {
+  height: 1px;
+  left: -999px;
+  position: absolute;
+  top: -999px;
+  visibility: hidden;
+  width: 1px;
+}
+
+.main-base {
+  background: #ddd;
+  left: 0px;
+  position: relative;
+  transition: all .3s;
+
+  header, footer {
+    background: #aaa;
+    color: #fff;
+  }
+}
+
+footer a {
+  color: #fff;
+}
+
+.nav {
+  //background: #000000;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+  //color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  padding: 8px 0;
+  position: fixed;
+  transition: all .3s;
+  z-index: 2;
+}
+
+.menu-list {
+  height: 0%;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: all .3s;
+
+  a {
+    border-bottom: 1px solid #eee;
+    color: #fff;
+    display: block;
+    padding: 12px 8px;
+    text-decoration: none;
+
+    &:hover {
+      background: rgba(0,0,0,.5);
+    }
+  }
+}
+
+.btn-label {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  //margin-left: 4px;
+}
+
+
+#nav-expand:checked + .nav {
+  background: #000000;
+  bottom: 0;
+  height: 100%;
+  right: 0;
+  width: 200px;
+
+  .menu-list {
+    height: 100%;
+  }
+
+  .btn-label {
+    color: transparent;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 20px;
+
+    &:hover {
+      background: #eee;
+    }
+
+    &::before {
+      color: #000;
+      content: "X";
+      line-height: 20px;
+    }
+  }
+
+
+  + .main-base {
+    left: 200px;
+  }
+}
