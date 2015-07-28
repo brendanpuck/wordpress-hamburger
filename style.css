@@ -54,18 +54,17 @@ footer a {
 }
 
 .nav {
-  //background: #000000;
   height: 30px;
   width: 30px;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
   cursor: pointer;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
   background-size: contain;
-  //color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
-  right: 0;
-  top: 0;
   overflow: hidden;
-  padding: 8px 0;
   position: fixed;
   transition: all .3s;
   z-index: 2;
@@ -81,7 +80,8 @@ footer a {
 
   a {
     border-bottom: 1px solid #eee;
-    color: #fff;
+    //color: #fff;
+    color: white;
     display: block;
     padding: 12px 8px;
     text-decoration: none;
@@ -93,10 +93,8 @@ footer a {
 }
 
 .btn-label {
+  color: blue;
   cursor: pointer;
-  margin: 0;
-  padding: 0;
-  //margin-left: 4px;
 }
 
 
@@ -106,13 +104,14 @@ footer a {
   height: 100%;
   right: 0;
   width: 200px;
+  margin: 0;
 
   .menu-list {
     height: 100%;
   }
 
   .btn-label {
-    color: transparent;
+    //color: transparent;
     display: inline-block;
     height: 20px;
     line-height: 20px;
